@@ -7,12 +7,10 @@ var cheerio=require('cheerio');
 var cheerio2=require('cheerio');
 var tbscrape=require('table-scraper');
 
-var port=8080;
-//app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.json());
 
-app.get('/', (req,res)=>{
-    res.send('Hello world');
+app.get('/', function(req,res){
+res.send("hello sucka world");
 });
 
 app.post('/pages',function(req,res){
@@ -41,6 +39,5 @@ app.post('/pages',function(req,res){
 });
 
 
-app.listen(port, ()=>{
-    console.log('server started on port '+  port);
-});
+app.listen(3000,'localhost');
+console.log("listening on port 3000");
